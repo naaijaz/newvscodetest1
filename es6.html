@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+    <script type="module" src="main.js"  ></script>
+</head>
+<body>
+   
+<h3>Class example</h3>
+
+<script>
+
+class inspector {
+
+constructor(uname,uage){
+this.name = uname;
+this.age = uage;
+}
+details(){
+console.log(`man name is ${this.name} and his age is ${this.age}Years`);
+}
+}
+
+const p = new inspector('hello',24);
+p.details();
+
+
+const q= new inspector('syed aijaz',34);
+q.details();
+
+</script>
+
+<h3>Fat arrow function</h3>
+<script>
+
+const sum = () => {
+alert('yes correct')
+}
+sum();
+</script>
+<script>
+
+
+
+
+
+const sum = number =>number*number;
+console.log(sum(2));
+
+const greet = (name,age) => `hello ${name} and you age is ${age}` ;
+console.log(greet("Aijaz",24));
+
+
+
+
+
+
+
+</script>
+
+
+
+<!-- making change for git -->
+<h3>Git init and git commit is done</h3>
+
+
+<!-- Git change done -->
+<!-- 
+
+<h3>Fat Arrow Function</h3>
+<input type="text" value="Enter name here" id="name">
+<button onclick="greet();">Update</button>
+ 
+<script>
+
+// function greet(){
+// var Name = document.getElementById('name').value;
+// alert(Name);
+// }
+
+greet =()=>{ 
+    var Name =document.getElementById('name').value;
+    alert(Name);
+}
+
+Addition=(A,B)=> {return A + B;}
+console.log(Addition(2,5));
+
+</script>
+
+<h3>Fat Arrow Function this</h3>
+
+<script>
+const person = {
+    test(){
+        setTimeout(() => {
+            console.log(this);
+        }, 2000);
+        setTimeout(function(){
+            console.log(this)
+        }, 2000);
+    }
+}
+person.test();
+
+</script>
+
+<h3>Template literals</h3>
+<p id='cname'>Here it is</p>
+<script>
+const CompanyName = "CG world";
+console.log(`${CompanyName}  is the company name
+we can wrie in dobule line of text in template literals`)
+document.getElementById('cname').innerText = CompanyName;
+</script>
+
+<h3>Arrays and Object Distraction</h3>
+es5
+<script>
+const details = {
+
+    name :"Syed Aijaz Ahnmed",
+    Age : 34,
+    country : "India"
+}
+
+const {name:personal_name,Age,country} =details;
+
+console.log(personal_name);
+
+
+</script>
+
+
+<h3>Promises</h3>
+<script>
+
+const myPromise = new Promise((resolved,rejected)=> {
+    const a= 2, b=2;
+    const c= a + b;
+    if(c === 4){
+        resolved('yes a +b isequal to 4');
+    }else
+    rejected('No a + b isequal to 4');
+    });
+    myPromise.then((m)=>{
+        console.log(m);
+
+    }).catch((err)=>{
+        console.log(err);
+    });
+</script>
+
+
+
+<h3>Spread</h3>
+
+<script>
+const myArray = [1,2,3,4,5,6];
+const myArrayup = [...myArray,7,8,9,10];
+console.log(myArray);
+console.log(myArrayup);
+</script>
+
+<h3>Rest</h3>
+<script>
+console.log('Rest Example here');
+const sum =(a,b,c,d) => a+b+c+d;
+console.log(sum(2,2,2,2));
+
+// if we need more value add 
+
+const Plus = (...numbers)=>{
+let total = 0;
+numbers.forEach((n)=>{
+    total +=n;
+    });
+console.log(total);
+
+}
+console.log(Plus(2,3,3,4,5,2,2,3));
+console.log('Rest Example end here');
+</script>
+
+
+<h3>Array Map</h3>
+
+<script>
+    console.log('Array Map Example  here');
+    const course =["php","mySql","python",'js'];
+    const newCourse = course.map((s)=>{
+return `<li> ${s} </li>`;
+
+    })
+    console.log(course);
+    console.log(newCourse);
+    console.log('Array Map Example End Here');
+
+
+const series = [1,2,3,4,5,6,7,8,9,10];
+
+let num = 5
+const Table = series.map((n)=> n * num );
+console.log(Table);
+
+</script>
+ -->
+
+
+
+
+</body>
+</html>
